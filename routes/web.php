@@ -19,6 +19,21 @@ Route::get('/signin', function () {
     return view('signin');
 });
 
+Route::get('/register', function () {
+    return view('auth.register');
+});
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/home', function(){
+        return view('home' );
+    })->name('home');
+    Route::get('/#', function(){
+        return view('#');
+    })->name('#');
+});
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

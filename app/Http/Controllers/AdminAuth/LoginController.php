@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\AdminAuth;
 use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new controller instance.
@@ -39,8 +39,18 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    protected function guard()
+    {
+        return auth()->guard('admin');
+    }
+
+    public function showLoginForm()
+    {
+      return view('Adminauth.login');
+    }
+
     public function logout(Request $request) {
-        Auth::logout();
-        return redirect('/');
-      }
+        Auth::guard('admin')->logout();
+        return redirect()->guest(route( 'admin.login' ));
+    }
 }

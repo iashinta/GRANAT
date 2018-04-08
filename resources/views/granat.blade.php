@@ -82,7 +82,7 @@
 				</div>
 			</div>	
 		</div>
-		@guest
+		@if (Auth::guest())
 		<nav class="gtco-nav sticky-banner" role="navigation">
 			<div class="gtco-container">
 				
@@ -101,7 +101,7 @@
 							</li>
 							<li><a href="portfolio.html">Portfolio</a></li>
 							<li><a href="blog.html">Blog</a></li>
-							<li><a href="/signin">Log In</a></li>
+							<li><a href="/login">Log In</a></li>
 						</ul>
 					</div>
 				</div>
@@ -130,7 +130,7 @@
 			<div class="row">
 				<div class="col-xs-12 text-center menu-1">
 					<ul>
-						<li class="active"><a href="/home">Home</a></li>
+						<li class="active"><a href="/">Home</a></li>
 						<li class="has-dropdown">
 							<a href="services.html">Services</a>
 							<ul class="dropdown">
@@ -161,7 +161,16 @@
 			</div>
 		</div>
 	</header>
-	@endguest
+
+ 	<div class="panel-body">
+        @if (session('status'))
+            <div class="alert alert-success">
+        		{{ session('status') }}
+            </div>
+        @endif
+    </div>
+                
+	@endif
 
 	<div class="flex-section gtco-gray-bg">
 		<div class="col-1">

@@ -120,24 +120,15 @@
 		</div>
     </header>
     
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2" style="margin-top:10px">
-                <div class="panel panel-default">
-
-                    <div class="panel-body">
-                        @if (session('status'))
-                            <div class="alert alert-success">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        You are logged in!
-                    </div>
-                </div>
+    <div class="panel-body">
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
             </div>
-        </div>
+        @endif
     </div>
+
+    
 
     <footer id="gtco-footer" role="contentinfo">
 		<div class="gtco-container">

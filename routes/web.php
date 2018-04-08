@@ -15,19 +15,15 @@ Route::get('/', function () {
     return view('granat');
 });
 
-Route::get('/admin', function () {
-    return view('admindashboard');
-});
-
-
 Route::group(['middleware' => 'auth'], function(){ });
 
 Route::group(['prefix'=>'admin'], function() {
 
     // Login Routes...
         Route::get('login', ['as' => 'admin.login', 'uses' => 'AdminAuth\LoginController@showLoginForm']);
-        Route::post('login', ['uses' => 'AdminAuth\LoginController@login']);
-        Route::post('logout', ['as' => 'admin.logout', 'uses' => 'AdminAuth\LoginController@logout']);
+        Route::post('login', ['as' => 'admin.login.submit','uses' => 'AdminAuth\LoginController@login']);
+        Route::get('logout', ['as' => 'admin.logout', 'uses' => 'AdminAuth\LoginController@logout']);
+
     
     // Registration Routes...
         Route::get('register', ['as' => 'admin.register', 'uses' => 'AdminAuth\RegisterController@showRegistrationForm']);
@@ -38,11 +34,10 @@ Route::group(['prefix'=>'admin'], function() {
         Route::post('password/email', ['as' => 'admin.password.email', 'uses' => 'AdminAuth\ForgotPasswordController@sendResetLinkEmail']);
         Route::get('password/reset/{token}', ['as' => 'admin.password.reset.token', 'uses' => 'AdminAuth\ResetPasswordController@showResetForm']);
         Route::post('password/reset', ['uses' => 'AdminAuth\ResetPasswordController@reset']);
+        Route::get('/dashboard','AdminController@index')->name('admin.dashboard');
     });
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::view('/admin','admindashboard')->middleware('auth:admin');
 

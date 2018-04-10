@@ -12,7 +12,7 @@
 */
 Auth::routes();
 Route::get('/', function () {
-    return view('granat');
+    return view('index');
 });
 
 Route::group(['middleware' => 'auth'], function(){ });

@@ -161,11 +161,22 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.img_hero{
+  max-width: 90%;
+  height: auto;
+}
 
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
   }
+}
+
+@media(max-width: 1366px){
+  .img_hero{
+  max-width: 70%;
+  height: auto;
+}
 }
 
 #hero:before {
@@ -1060,6 +1071,24 @@ VIEW LOG IN&REgister (begin)
   background-size: cover;
 }
 
+.reg-container{
+  width: 100%;
+  height: 120vh;
+    padding-top: 100px;
+  background: linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+  url(../../js/images/hero.jpg)
+  center no-repeat;
+  background-size: cover;
+}
+
+@media (max-height: 768px){
+  .reg-container{
+  width: 100%;
+  height: 150vh;
+  }
+}
+
 .card{
   border-top: solid #dc7135 5px;
   border-radius: 0%;
@@ -1083,6 +1112,15 @@ VIEW LOG IN&REgister (begin)
   margin-left: -15px;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
 /**********************************************
 VIEW LOG IN (end)
 **********************************************/

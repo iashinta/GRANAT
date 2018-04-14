@@ -1,7 +1,7 @@
-@extends('home-template.app')
+@extends('home-template.nav-reg')
 
 @section('Title')
-	GrAnaT
+	Log in GrAnaT
 @endsection
 
 @section('body')
@@ -13,7 +13,7 @@
 
 				<div class="col-md-12">
 					<div class="col-md-6 animate-box">
-					<h3 class="title">Masuk Akun</h3>
+					<h3 class="title">LOG IN</h3>
 					<form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 						<div class="row form-group{{ $errors->has('email') ? ' has-error' : '' }}">

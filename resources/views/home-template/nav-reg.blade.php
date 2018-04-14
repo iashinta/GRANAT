@@ -39,9 +39,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="menu-active"><a href="/#hero">Home</a></li>
+          <li><a href="/#about">About Us</a></li>
+          <li><a href="/#contact">Contact</a></li>
           <li><a href="{{url('register')}}"   >Register</a></li>
           <li><a href="{{url('login')}}">Log in</a></li>
         </ul>
@@ -61,9 +61,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="menu-active"><a href="/#hero">Home</a></li>
+          <li><a href="/#about">About Us</a></li>
+          <li><a href="/#contact">Contact</a></li>
           <li><a href="{{url('register')}}">{{ Auth::user()->name }}</a></li>
           <li><a href="{{url('logout')}}">Keluar</a></li>
         </ul>

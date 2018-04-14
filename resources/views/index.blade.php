@@ -1,7 +1,7 @@
 @extends('home-template.app')
 
 @section('Title')
-	GrAnaT
+	Welcome to GrAnaT
 @endsection
 
 @section('body')
@@ -11,8 +11,11 @@
   @if (Auth::guest())
   <section id="hero">
     <div class="hero-container">
-      <h1>This is GrAnaT!</h1>
-      <h2>"Hail a New Dawn!"</h2>
+      <div >
+        <img class="img_hero" src="{{ asset('images\hero_logo.png')}}">
+      </div>
+<!--       <h1>Welcome to GrAnaT!</h1>
+      <h2>"Symphony of Divergency"</h2> -->
       <a href="{{url('register')}}" class="btn-get-started">Daftar Sekarang</a>
     </div>
   </section><!-- #hero -->
@@ -21,9 +24,12 @@
 
   <section id="hero">
     <div class="hero-container">
+      <div >
+        <img class="img_hero" src="{{ asset('images\hero_logo.png')}}">
+      </div>
       <h1>Welcome to GrAnaT {{ Auth::user()->name }}!</h1>
       <h2>Tidak Alasan Untuk Menyembunyikan Bakatmu</h2>
-      <h2>"Hail a New Dawn!"</h2>
+      <h2>"Symphony of Divergency"</h2>
     </div>
   </section><!-- #hero -->
   <main id="main">
@@ -37,7 +43,7 @@
         <div class="row about-container">
 
           <div class="col-lg-6 content order-lg-1 order-2">
-            <h2 class="title">Apa itu GrAnaT ?</h2>
+            <h2 class="title">About GrAnaT</h2>
             <h3 class="sub-title">"Gelar Apresiasi Anak Teknik"</h3>
             <p>
               GrAnaT (Gelar Apresiasi Anak Teknik) merupakan kegiatan tahunan dari Senat Mahasiswa Fakultas Teknik Universitas Udayana. GrAnaT merupakan Event Underground kampus terbesar yang ada di Bali yang menampilkan band-band Bali dengan Aliran musik Underground
@@ -45,8 +51,8 @@
 
             <div class="icon-box wow fadeInUp">
               <div class="icon"><i class="fa fa-quote-right"></i></div>
-              <h4>"Hail a New Dawn"</h4>
-              <p class="description">Memiliki makna menyambut awal yang baru, ketika cerita yang lama sudah berakhir.</p>
+              <h4>"Symphony of Divergency"</h4>
+              <p class="description">lorem ipsun dolor sit amet, lorem ipsun dolor sit amet,lorem ipsun dolor sit amet</p>
             </div>
 
 

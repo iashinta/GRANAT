@@ -1,4 +1,4 @@
-@extends('home-template.app')
+@extends('home-template.nav-reg')
 
 @section('Title')
 	GrAnaT

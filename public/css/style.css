@@ -1085,9 +1085,11 @@ VIEW LOG IN&REgister (begin)
 @media (max-height: 768px){
   .reg-container{
   width: 100%;
-  height: 150vh;
+  height: 100%;
   }
 }
+
+
 
 .card{
   border-top: solid #dc7135 5px;

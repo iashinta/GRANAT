@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Atomic+Age" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Marcellus+SC|Raleway" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> 
 
 		<!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
@@ -41,9 +42,12 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#about">About Us</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#facts">Important Date</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="{{url('register')}}"   >Register</a></li>
           <li><a href="{{url('login')}}">Log in</a></li>
+          <li><button class="nav-btn">GET TICKET</button></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -63,9 +67,12 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#about">About Us</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#facts">Important Date</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="{{url('register')}}">{{ Auth::user()->name }}</a></li>
           <li><a href="{{url('logout')}}">Keluar</a></li>
+          <li><button class="nav-btn">GET TICKET</button></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -88,6 +95,26 @@
     <div class="container">
       <div class="copyright">
         &copy; Hak Cipta <strong>GrAnaT</strong>. Dan Semua Yang Terkait
+      </div>
+    </div>
+    <div class="container-fluid sponsor">
+      <div class="title">
+        <h3 class="section-title-inverse"><strong>SPONSOR</strong></h3>
+          <div class="row sponsor-row">
+
+            <div class="col-lg-3 banner">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+            </div>
+            <div class="col-lg-3 banner">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+            </div>
+            <div class="col-lg-3 banner">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+            </div>
+            <div class="col-lg-3 banner">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+            </div>
+          </div>
       </div>
     </div>
   </footer><!-- #footer -->

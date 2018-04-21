@@ -39,20 +39,24 @@
       About Us Section
     ============================-->
     <section id="about">
-      <div class="container">
+      <div class="container layer">
         <div class="row about-container">
 
-          <div class="col-lg-6 content order-lg-1 order-2">
+          <div class="col-lg-6 content order-lg-1 order-2 wow fadeInUp">
             <h2 class="title">About GrAnaT</h2>
             <h3 class="sub-title">"Gelar Apresiasi Anak Teknik"</h3>
             <p>
               GrAnaT (Gelar Apresiasi Anak Teknik) merupakan kegiatan tahunan dari Senat Mahasiswa Fakultas Teknik Universitas Udayana. GrAnaT merupakan Event Underground kampus terbesar yang ada di Bali yang menampilkan band-band Bali dengan Aliran musik Underground
             </p>
 
-            <div class="icon-box wow fadeInUp">
+            <div class="icon-box">
               <div class="icon"><i class="fa fa-quote-right"></i></div>
               <h4>"Symphony of Divergency"</h4>
               <p class="description">lorem ipsun dolor sit amet, lorem ipsun dolor sit amet,lorem ipsun dolor sit amet</p>
+            </div>
+
+            <div class="read-more pull-right">
+              <a href="#">Read More </a><i class="fas fa-angle-double-right"></i>
             </div>
 
 
@@ -63,13 +67,59 @@
 
       </div>
     </section><!-- #about -->
-
     <!--==========================
-      Facts Section
+      Timeline Section
+    ============================-->
+    <section id="news">
+      <div class="container">
+        <div class="page-header">
+          <h1 id="timeline">News</h1>
+        </div>
+        <!-- isi timeline begin -->
+        <div >
+        <ul class="timeline">
+          <li class="wow fadeInLeft">
+            <div class="timeline-badge"><i class="far fa-edit"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">lorem Ipsun 1</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-right wow fadeInRight">
+            <div class="timeline-badge"><i class="fab fa-bitcoin"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">Lorem Ipsun 2</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p>
+              </div>
+            </div>
+          </li>
+          <li class="wow fadeInLeft">
+            <div class="timeline-badge"><i class="far fa-calendar-alt"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">Lorem Ipsun 3</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--==========================
+      Tour Section
     ============================-->
     <section id="facts">
       <div class="layer">
-        <div class="container wow fadeInUp">
+        <div class="container fadeInUp">
           <div class="section-header ">
            
             <h3 class="section-title-inverse"><span><i class="fa fa-road"></i></span> <strong>TOUR KOTA</strong></h3>
@@ -122,7 +172,7 @@
       Contact Section
     ============================-->
     <section id="contact">
-      <div class="container wow fadeInUp">
+      <div class="container fadeInUp">
         <div class="section-header">
           <h3 class="section-title">Kontak</h3>
           <div class="kontak-isi">
@@ -151,8 +201,11 @@
             </div>
 
               <div class="social-links">
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="kontak-ico"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/granatsmft/" class="kontak-ico"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="kontak-ico"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" class="kontak-ico"><i class="fab fa-line"></i></a>
+              <a href="#" class="kontak-ico"><i class="fab fa-youtube"></i></a>
             </div>
 
             </div>

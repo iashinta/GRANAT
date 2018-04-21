@@ -41,9 +41,12 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="/#hero">Home</a></li>
           <li><a href="/#about">About Us</a></li>
+          <li><a href="/#news">News</a></li>
+          <li><a href="/#facts">Important Date</a></li>
           <li><a href="/#contact">Contact</a></li>
           <li><a href="{{url('register')}}"   >Register</a></li>
           <li><a href="{{url('login')}}">Log in</a></li>
+          <li><button class="nav-btn">GET TICKET</button></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -63,9 +66,12 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="/#hero">Home</a></li>
           <li><a href="/#about">About Us</a></li>
+          <li><a href="/#news">News</a></li>
+          <li><a href="/#facts">Important Date</a></li>
           <li><a href="/#contact">Contact</a></li>
           <li><a href="{{url('register')}}">{{ Auth::user()->name }}</a></li>
           <li><a href="{{url('logout')}}">Keluar</a></li>
+          <li><button class="nav-btn">GET TICKET</button></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -88,6 +94,27 @@
     <div class="container">
       <div class="copyright">
         &copy; Hak Cipta <strong>GrAnaT</strong>. Dan Semua Yang Terkait
+      </div>
+    </div>
+
+    <div class="container-fluid sponsor">
+      <div class="title">
+        <h3 class="section-title-inverse"><strong>SPONSOR</strong></h3>
+          <div class="row sponsor-row">
+
+            <div class="col-lg-3 banner">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+            </div>
+            <div class="col-lg-3 banner">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+            </div>
+            <div class="col-lg-3 banner">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+            </div>
+            <div class="col-lg-3 banner">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+            </div>
+          </div>
       </div>
     </div>
   </footer><!-- #footer -->

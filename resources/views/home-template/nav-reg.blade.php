@@ -39,7 +39,7 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="/#hero">Home</a></li>
+          <li><a href="/#hero">Home</a></li>
           <li><a href="/#about">About Us</a></li>
           <li><a href="/#news">News</a></li>
           <li><a href="/#facts">Important Date</a></li>
@@ -70,7 +70,7 @@
           <li><a href="/#facts">Important Date</a></li>
           <li><a href="/#contact">Contact</a></li>
           <li><a href="{{url('register')}}">{{ Auth::user()->name }}</a></li>
-          <li><a href="{{url('logout')}}">Keluar</a></li>
+          <li><a href="{{url('logout')}}">Log Out</a></li>
           <li><button class="nav-btn">GET TICKET</button></li>
         </ul>
       </nav><!-- #nav-menu-container -->

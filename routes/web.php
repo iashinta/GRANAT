@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/admin/peserta', 'UserController@index');
+
+Route::get('auth.register', 'auth.RegisterController@showKabupatens');
+
 Route::group(['middleware' => 'auth'], function(){ });
 
 Route::group(['prefix'=>'admin'], function() {

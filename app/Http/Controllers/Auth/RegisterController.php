@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Kabupaten;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -39,6 +41,12 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function showRegistrationForm()
+    {
+        $kabupatens = kabupaten::all();
+        return view('auth.register', compact('kabupatens'));
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -52,6 +60,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'asal' => 'required|string|max:255',
+            'link' => 'required|url',
         ]);
     }
 
@@ -68,6 +77,14 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'asal' => $data['asal'],
+            'genre' => $data['genre'],
+            'leader' => $data['leader'],
+            'no_id' => $data['no_id'],
+            'link' => $data['link'],
+            'no_telp' => $data['no_telp']
+
         ]);
     }
+
+    
 }

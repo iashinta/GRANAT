@@ -91,10 +91,22 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="Leader" class="col-md-4 control-label">Leader</label>
+                                    <label for="leader" class="col-md-4 control-label">Leader</label>
 
                                     <div class="col-md-8">
-                                        <input id="Leader" type="text" class="form-control" name="Leader" required>
+                                        <input id="leader" type="text" class="form-control" name="leader" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="asal" class="col-md-4 control-label">Asal</label>
+
+                                    <div class="col-md-8">
+                                        <select id="asal" name="asal" style="width:390px; padding:10px; border-radius:3px"><br>
+                                            @foreach($kabupatens as $asal)
+                                                    <option value="{{$asal->id}}"> {{$asal->name}} </option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
 
@@ -107,10 +119,10 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="kd_pos" class="col-md-4 control-label">Kode Pos</label>
+                                    <label for="link" class="col-md-4 control-label">Link Video</label>
 
                                     <div class="col-md-8">
-                                        <input id="kd_pos" type="number" min="5" max="5" class="form-control" name="kd_pos" required>
+                                        <input id="link" type="url" class="form-control" name="link" required>
                                     </div>
                                 </div>
 

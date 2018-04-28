@@ -15,8 +15,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'asal'
+        'name', 'email', 'password', 'asal', 'genre', 'leader', 'no_id', 'link', 'no_telp', 'status'
     ];
+
+    public function kabupaten(){
+    	return $this->belongsTo('App\Kabupaten', 'asal', 'id');
+    }
 
     /**
      * The attributes that should be hidden for arrays.

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Kabupaten;
 
 class UserController extends Controller
 {
@@ -12,8 +14,9 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $users= user::all();
+        return view('datapeserta', compact('users'));
     }
 
     /**
@@ -45,7 +48,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

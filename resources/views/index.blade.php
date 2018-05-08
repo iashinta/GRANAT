@@ -1,7 +1,7 @@
 @extends('home-template.app')
 
 @section('Title')
-	Welcome to GrAnaT
+	GrAnaT&reg; 2018
 @endsection
 
 @section('body')
@@ -14,7 +14,7 @@
       <div >
         <img class="img_hero" src="{{ asset('images\hero_logo.png')}}">
       </div>
-<!--       <h1>Welcome to GrAnaT!</h1>
+<!--       <h1>GrAnaT&reg; 2018</h1>
       <h2>"Symphony of Divergency"</h2> -->
       <a href="{{url('register')}}" class="btn-get-started">Daftar Sekarang</a>
     </div>
@@ -27,9 +27,9 @@
       <div >
         <img class="img_hero" src="{{ asset('images\hero_logo.png')}}">
       </div>
-      <h1>Welcome to GrAnaT {{ Auth::user()->name }}!</h1>
-      <h2>Tidak Alasan Untuk Menyembunyikan Bakatmu</h2>
-      <h2>"Symphony of Divergency"</h2>
+      <h1>WELCOME TO GrAnaT&reg;, {{ Auth::user()->name }}!</h1>
+      <h2>The biggest underground music event in Bali</h2>
+      <h2>" Symphony of Divergency "</h2>
     </div>
   </section><!-- #hero -->
   <main id="main">
@@ -43,26 +43,35 @@
         <div class="row about-container">
 
           <div class="col-lg-6 content order-lg-1 order-2 wow fadeInUp">
-            <h2 class="title">About GrAnaT</h2>
-            <h3 class="sub-title">"Gelar Apresiasi Anak Teknik"</h3>
+            <h2 class="title">About GrAnaT&reg;</h2>
+            <h3 class="sub-title">"Gelar Apresiasi anak Teknik"</h3>
             <p>
-              GrAnaT (Gelar Apresiasi Anak Teknik) merupakan kegiatan tahunan dari Senat Mahasiswa Fakultas Teknik Universitas Udayana. GrAnaT merupakan Event Underground kampus terbesar yang ada di Bali yang menampilkan band-band Bali dengan Aliran musik Underground
+                GrAnaT&reg; merupakan event tahunan yang diselenggarakan oleh Senat Mahasiswa Fakultas Teknik Universitas Udayana <a href="https://smft.unud.ac.id" class="smft">(SMFT UNUD)</a>. Kegiatan ini merupakan warisan pemikiran dari senior terdahulu yang berusaha kami pertahankan sehingga GrAnaT&reg; tetap eksis dan berkembang dengan semangat untuk terus berkarya dan berjaya menjadi wadah bagi komunitas musik underground di Bali sehingga GrAnaT&reg; menjadi icon musik underground terbesar di Bali, GrAnaT&reg; terus berkembang dan menyuguhkan sesuatu yang baru dalam menciptakan event musik underground yang berkualitas.
+            </p>
+            <p>
+                GrAnaT&reg; akan terus berkarya dan berinovasi menampilkan sesuatu yang baru agar selalu menjadi event yang ditunggu setiap tahunnya oleh para penikmat dan pecinta musik underground. 
             </p>
 
             <div class="icon-box">
               <div class="icon"><i class="fa fa-quote-right"></i></div>
               <h4>"Symphony of Divergency"</h4>
-              <p class="description">lorem ipsun dolor sit amet, lorem ipsun dolor sit amet,lorem ipsun dolor sit amet</p>
+              <p class="description">Memiliki arti alunan musik yang berbeda. Symphony of Divergency memiliki makna bahwa GrAnaT&reg; 2018, menyatukan beberapa aliran musik underground yang berbeda. </p>
             </div>
 
             <div class="read-more pull-right">
-              <a href="#">Read More </a><i class="fas fa-angle-double-right"></i>
+              <a href="https://granatsmft.com/sejarah">Read More </a><i class="fas fa-angle-double-right"></i>
             </div>
 
 
           </div>
 
-          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInDown"></div>
+          <div class="col-lg-6 order-lg-2 order-1 wow fadeInDown">
+              <div class="videoWrapper">
+                  <iframe width="560" height="349"
+                    src="https://www.youtube.com/embed/xKjD74z0xvI">
+                    </iframe>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -73,7 +82,7 @@
     <section id="news">
       <div class="container">
         <div class="page-header">
-          <h1 id="timeline">News</h1>
+          <h1 id="timeline">Pengumuman</h1>
         </div>
         <!-- isi timeline begin -->
         <div >
@@ -82,10 +91,10 @@
             <div class="timeline-badge"><i class="far fa-edit"></i></div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4 class="timeline-title">lorem Ipsun 1</h4>
+                <h4 class="timeline-title">Pendaftaran Band</h4>
               </div>
               <div class="timeline-body">
-                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+                <p>Pendaftaran band audition dibuka dari tanggal 6 Mei 2018 sampai 16 Juni 2018.</p>
               </div>
             </div>
           </li>
@@ -93,10 +102,10 @@
             <div class="timeline-badge"><i class="fab fa-bitcoin"></i></div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4 class="timeline-title">Lorem Ipsun 2</h4>
+                <h4 class="timeline-title">Pembayaran Registrasi Band Audition</h4>
               </div>
               <div class="timeline-body">
-                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p>
+                <p>Pembayaran di transfer melalui Bank BRI sejumlah Rp.50.000,-<br>No. Rek 0248-01-024417-50-2 a.n. I Dewa Gede Wedrayana Kembar Suputra. Konfirmasi dan sertakan bukti pembayaran ke CP 082247819997.</p>
               </div>
             </div>
           </li>
@@ -104,10 +113,10 @@
             <div class="timeline-badge"><i class="far fa-calendar-alt"></i></div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4 class="timeline-title">Lorem Ipsun 3</h4>
+                <h4 class="timeline-title">Audisi CD</h4>
               </div>
               <div class="timeline-body">
-                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis.</p>
+                <p>Audisi CD akan dilaksanakan pada tanggal 17 Juni 2018 di Sekber FT UNUD, Kampus Sudirman, pengumuman lebih lanjut akan dipost segera. </p>
               </div>
             </div>
           </li>
@@ -122,43 +131,43 @@
         <div class="container fadeInUp">
           <div class="section-header ">
            
-            <h3 class="section-title-inverse"><span><i class="fa fa-road"></i></span> <strong>TOUR KOTA</strong></h3>
+            <h3 class="section-title-inverse"><span><i class="fa fa-calendar"></i></span> <strong>Tanggal Penting GrAnaT&reg; </strong></h3>
             <p class="section-description-inverse">
-            GrAnat tidak hanya berhenti di satu tempat, tunggu kami di Kotamu! </p>
+                Catat tanggalnya! Jangan sampai ketinggalan GrAnaT&reg; tahun ini!!!</p>
           </div>
           <div class="row counters">
 
       				<div class="col-lg-3 col-6 text-center">
-                <div class="thumbnail">
-                  <img class="img-kab" src="{{ asset('js\images\kab1.jpg')}}">
-                  <p><strong>Bangli</strong></p>
-                  <p>12 Juli 2018</p>
+                  <div class="thumbnail">
+                    <img class="img-kab" src="{{ asset('images\daftar.jpg')}}">
+                    <p><strong>Pendaftaran Band</strong></p>
+                    <p>6 Mei-16 Juni 2018</p>
+                  </div>
                 </div>
-      				</div>
-
-              <div class="col-lg-3 col-6 text-center">
-                <div class="thumbnail">
-                  <img class="img-kab" src="{{ asset('js\images\kab1.jpg')}}">
-                  <p><strong>Gianyar</strong></p>
-                  <p>19 Juli 2018</p>
+  
+                <div class="col-lg-3 col-6 text-center">
+                  <div class="thumbnail">
+                    <img class="img-kab" src="{{ asset('images\cd.jpg')}}">
+                    <p><strong>Audisi CD</strong></p>
+                    <p>17 Juni 2018</p>
+                  </div>
                 </div>
-              </div>
-
-              <div class="col-lg-3 col-6 text-center">
-                <div class="thumbnail">
-                  <img class="img-kab" src="{{ asset('js\images\kab1.jpg')}}">
-                  <p><strong>Karangasem</strong></p>
-                  <p>27 Juli 2018</p>
+  
+                <div class="col-lg-3 col-6 text-center">
+                  <div class="thumbnail">
+                    <img class="img-kab" src="{{ asset('images\audition.jpg')}}">
+                    <p><strong>Next Tour and Audition</strong></p>
+                    <p>30 Juni 2018</p>
+                  </div>
                 </div>
-              </div>
-
-              <div class="col-lg-3 col-6 text-center">
-                <div class="thumbnail">
-                  <img class="img-kab" src="{{ asset('js\images\kab1.jpg')}}">
-                  <p><strong>Klungkung</strong></p>
-                  <p>3 Agustus 2018</p>
+  
+                <div class="col-lg-3 col-6 text-center">
+                  <div class="thumbnail">
+                    <img class="img-kab" src="{{ asset('images\main.jpg')}}">
+                    <p><strong>Main Event</strong></p>
+                    <p>25 Agustus 2018</p>
+                  </div>
                 </div>
-              </div>
               
     			</div>
 
@@ -174,7 +183,7 @@
     <section id="contact">
       <div class="container fadeInUp">
         <div class="section-header">
-          <h3 class="section-title">Kontak</h3>
+          <h3 class="section-title">Contact</h3>
           <div class="kontak-isi">
             <div class="row">
 
@@ -186,12 +195,12 @@
 
 
 
-                <p>Universitas Udayana, Kampus Sudirman<br>Jalan P.B. Sudirman, Dangin Puri Klod, Denpasar Bar.Bali</p>
+                <p>Sekretariat Bersama Fakultas Teknik Universitas Udayana<br>Jalan P.B. Sudirman, Denpasar, Bali 80234</p>
               </div>
 
               <div>
                 <i class="fa fa-envelope"></i>
-                <p>granatsmft@gmail.com</p>
+                <p>info@granatsmft.com</p>
               </div>
 
               <div>
@@ -201,11 +210,11 @@
             </div>
 
               <div class="social-links">
-              <a href="#" class="kontak-ico"><i class="fab fa-facebook"></i></a>
+              <a href="https://web.facebook.com/granatSMFTunud/" class="kontak-ico"><i class="fab fa-facebook"></i></a>
               <a href="https://www.instagram.com/granatsmft/" class="kontak-ico"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="kontak-ico"><i class="fab fa-whatsapp"></i></a>
-              <a href="#" class="kontak-ico"><i class="fab fa-line"></i></a>
-              <a href="#" class="kontak-ico"><i class="fab fa-youtube"></i></a>
+              <a href="https://twitter.com/granat_smft" class="kontak-ico"><i class="fab fa-twitter"></i></a>
+              <a href="line://ti/p/@ibo3252f" class="kontak-ico"><i class="fab fa-line"></i></a>
+              <a href="https://www.youtube.com/channel/UCJiGAXqyzXC74Cli2PDXJuQ" class="kontak-ico"><i class="fab fa-youtube"></i></a>
             </div>
 
             </div>

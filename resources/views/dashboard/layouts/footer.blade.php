@@ -1,0 +1,1 @@
+<footer class="footer"> Copyright © 1994-2018 <a href="https://granatsmft.com">GrAnaT&reg; SMFT</a>. All rights reserved.</footer>

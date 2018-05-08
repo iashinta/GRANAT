@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<title>@yield ('Title')</title>
-		<link rel="stylesheet" type="text/css" href={{asset('css/style.css')}}>
+    <link rel="stylesheet" type="text/css" href={{asset('css/style.css')}}>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/icon.png')}}">
 <!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="{{asset('js/jquery.min.js')}}"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
@@ -45,6 +46,7 @@
           <li><a href="#news">News</a></li>
           <li><a href="#facts">Important Date</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="{{url('sejarah')}}"   >History</a></li>
           <li><a href="{{url('register')}}"   >Register</a></li>
           <li><a href="{{url('login')}}">Log in</a></li>
           <li><button class="nav-btn">GET TICKET</button></li>
@@ -65,13 +67,14 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
+        <li class="menu"><a href="{{url('home')}}">DashBoard</a></li>
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#news">News</a></li>
           <li><a href="#facts">Important Date</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="{{url('register')}}">{{ Auth::user()->name }}</a></li>
-          <li><a href="{{url('logout')}}">Keluar</a></li>
+          <li><a href="{{url('logout')}}">Log Out</a></li>
           <li><button class="nav-btn">GET TICKET</button></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -94,25 +97,25 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Hak Cipta <strong>GrAnaT</strong>. Dan Semua Yang Terkait
+      Copyright  &copy; 1994-2018 <strong>GrAnaT&reg; SMFT</strong>. All Rights Reserved.
       </div>
     </div>
     <div class="container-fluid sponsor">
       <div class="title">
-        <h3 class="section-title-inverse"><strong>SPONSOR</strong></h3>
+        <h3 class="section-title-inverse"><strong>SPONSORED BY</strong></h3>
           <div class="row sponsor-row">
 
             <div class="col-lg-3 banner">
-              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\S1.jpg')}}">
             </div>
             <div class="col-lg-3 banner">
-              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\S2.jpg')}}">
             </div>
             <div class="col-lg-3 banner">
-              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\S3.jpg')}}">
             </div>
             <div class="col-lg-3 banner">
-              <img class=".img-responsive sponsor-img" src="{{ asset('images\sponsor_sample.png')}}">
+              <img class=".img-responsive sponsor-img" src="{{ asset('images\S4.jpg')}}">
             </div>
           </div>
       </div>

@@ -30,8 +30,8 @@ Route::group(['prefix'=>'admin'], function() {
 
     
     // Registration Routes...
-        Route::get('register', ['as' => 'admin.register', 'uses' => 'AdminAuth\RegisterController@showRegistrationForm']);
-        Route::post('register', ['uses' => 'AdminAuth\RegisterController@register']);
+        //Route::get('register', ['as' => 'admin.register', 'uses' => 'AdminAuth\RegisterController@showRegistrationForm']);
+        //Route::post('register', ['uses' => 'AdminAuth\RegisterController@register']);
     
     // Password Reset Routes...
         Route::get('password/reset', ['as' => 'admin.password.reset', 'uses' => 'AdminAuth\ForgotPasswordController@showLinkRequestForm']);
@@ -44,4 +44,9 @@ Route::group(['prefix'=>'admin'], function() {
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/upload-berkas', 'HomeController@upload')->name('upload');
+Route::post('/upload-berkas','HomeController@store');
+Route::get('/sejarah', function(){
+    return view("sejarah");
+});
 

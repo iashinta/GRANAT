@@ -1,7 +1,7 @@
 @extends('layouts.adm-app')
 
 @section('Title')
-	Data Peserta
+	Data Band GrAnaT&reg;
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>PESERTA GRANAT</h2>   
+                     <h2>Pendaftar Band Audition GrAnaT&reg; 2018</h2>   
                         <h5>You are logged in as {{Auth::guard('admin')->user()->username}}</h5>
                        
                     </div>
@@ -22,14 +22,14 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Data Peserta
+                            Data Band
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th>Id</th>
+                                            <th>No</th>
                                             <th>Nama Band</th>
                                             <th>Email</th>
                                             <th>Genre</th>

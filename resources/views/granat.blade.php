@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('Title')
-	Welcome to GrAnaT
+	GrAnaT&reg; 2018
 @endsection
 
 @section('konten')

@@ -1,7 +1,7 @@
 @extends('home-template.nav-reg')
 
 @section('Title')
-	Log in GrAnaT
+	Log in GrAnaT&reg; 2018
 @endsection
 
 @section('body')
@@ -48,8 +48,13 @@
 									Forgot Your Password?
 								</a>
 							</div>
+						<div>
+								<a class="btn btn-link" href="https://granatsmft.com/register">
+									Not Register? Register Now >>
+								</a>
+							</div>
 							
-							<input type="submit" value="Masuk" class="btn btn-primary">
+							<input type="submit" value="Login" class="btn btn-primary">
 							
 						</div>
 

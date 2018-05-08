@@ -1,7 +1,7 @@
 @extends('home-template.nav-reg')
 
 @section('Title')
-	Register GrAnaT
+	Register GrAnaT&reg;
 @endsection
 
 @section('body')
@@ -91,7 +91,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="leader" class="col-md-4 control-label">Leader</label>
+                                    <label for="leader" class="col-md-4 control-label">Leader Name</label>
 
                                     <div class="col-md-8">
                                         <input id="leader" type="text" class="form-control" name="leader" required>
@@ -111,18 +111,10 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="no_id" class="col-md-4 control-label">No. Identitas</label>
+                                    <label for="no_id" class="col-md-4 control-label">No. Identitas (KTP)</label>
 
                                     <div class="col-md-8">
                                         <input id="no_id" type="number" class="form-control" name="no_id" required>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="link" class="col-md-4 control-label">Link Video</label>
-
-                                    <div class="col-md-8">
-                                        <input id="link" type="url" class="form-control" name="link" required>
                                     </div>
                                 </div>
 
@@ -133,8 +125,8 @@
                                         <input id="no_telp" type="number" class="form-control" name="no_telp" required>
                                     </div>
                                 </div>
-
                                 
+
 
 
                                 <!-- line baru end -->
@@ -150,6 +142,14 @@
                                         </button>
                                     </div>
                                 </div>
+					        
+					        	<div class="form-group">
+    						    <div>
+    								<a class="btn btn-link" href="https://granatsmft.com/login">
+    									already signed up? Login now >>
+    								</a>
+    						    </div>
+    						    </div>
                             <!-- form end here -->
                             </form>
                         </div>

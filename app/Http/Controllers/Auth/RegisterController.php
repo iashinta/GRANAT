@@ -60,7 +60,6 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'asal' => 'required|string|max:255',
-            'link' => 'required|url',
         ]);
     }
 
@@ -80,7 +79,6 @@ class RegisterController extends Controller
             'genre' => $data['genre'],
             'leader' => $data['leader'],
             'no_id' => $data['no_id'],
-            'link' => $data['link'],
             'no_telp' => $data['no_telp']
 
         ]);

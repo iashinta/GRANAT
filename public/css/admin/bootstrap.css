@@ -11,6 +11,7 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
+  width: 100%;
   margin: 0;
 }
 article,
@@ -25,6 +26,7 @@ main,
 nav,
 section,
 summary {
+  width: 100%;
   display: block;
 }
 audio,
@@ -177,6 +179,7 @@ optgroup {
   font-weight: bold;
 }
 table {
+  width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -1401,7 +1404,6 @@ pre code {
   }
 }
 table {
-  max-width: 100%;
   background-color: transparent;
 }
 th {
@@ -1449,6 +1451,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
+  width: 100%;
   border: 1px solid #ddd;
 }
 .table-bordered > thead > tr > th,
@@ -1457,10 +1460,12 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
+  width: 100%;
   border: 1px solid #ddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
+  width: 100%;
   border-bottom-width: 2px;
 }
 .table-striped > tbody > tr:nth-child(odd) > td,
@@ -1590,7 +1595,7 @@ table th[class*="col-"] {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #ddd;
+    border: 1px solid #000;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -3448,6 +3453,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -1px;
 }
 .nav {
+  width: 100%;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -4925,7 +4931,6 @@ a.list-group-item-danger.active:focus {
 }
 .panel > .table-responsive {
   margin-bottom: 0;
-  border: 0;
 }
 .panel-group {
   margin-bottom: 20px;

@@ -20,14 +20,10 @@
                
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Data Band
-                        </div>
+                        <h3 style="padding:10px">Data Band</h3>
                         <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                    <thead>
+                                <table class="table table-responsive table-hover" id="dataTables-example" style="width:100%" >
+                                    <thead >
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Band</th>
@@ -36,7 +32,11 @@
                                             <th>Leader</th>
                                             <th>Asal</th>
                                             <th>No Identitas</th>
+                                            <th>Riwayat</th>
+                                            <th>Profil</th>
+                                            <th>Lagu</th>
                                             <th>Link</th>
+                                            <th>Logo</th>
                                             <th>No Telp</th>
                                             <th>Status</th>
                                             <th> </th>
@@ -44,37 +44,47 @@
                                     </thead>
                                     @foreach ($users as $user)
                                     <tbody>
-                                        <tr class="odd gradeX">
+                                        <tr>
                                             <td>{{$user->id}}</td>
                                             <td>{{$user->name}}</td>
                                             <td>{{$user->email}}</td>
                                             <td>{{$user->genre}}</td>
                                             <td>{{$user->leader}}</td>
-                                            <td>{{$user->asal}}</td>
+                                            <td>{{$user->nama_kabupaten}}</td>
                                             <td>{{$user->no_id}}</td>
+                                            <td>{{$user->riwayat}}</td>
+                                            <td>{{$user->profil}}</td>
+                                            <td>{{$user->lagu}}</td>
                                             <td>{{$user->link}}</td>
+                                            <td>{{$user->logo}}</td>
                                             <td>{{$user->no_telp}}</td>
                                             <td>{{$user->status}}</td>
                                             <td style="text-align: center">
                                                 <div>
-                                                    <form method="GET" action="/#" style="display: inline-block">
-                                                        {{csrf_field()}}
-                                                        <button type="submit" href="/#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </button></form>
-                                                    <form class='delete' method="POST" action="/#" style="display: inline-block">
-                                                        {{csrf_field()}}
-                                                        <input type="hidden" name="_method" value="DELETE">
-                                                        <button type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button></form>
+                                                    @if($user->status=="Sudah Lunas")
+                                                        <form method="POST" action="{{ route('cancel', $user->id) }}" style="display: inline-block">
+                                                            {{csrf_field()}}
+                                                            <button type="submit" class="btn btn-danger square-btn-adjust" style="background-color:red;border-radius: 3px">Batal Konfirmasi
+                                                            </button>
+                                                        </form>
+                                                    @else
+                                                        <form method="POST" action="{{ route('confirm', $user->id) }}" style="display: inline-block">
+                                                            {{csrf_field()}}
+                                                            {{ method_field('PATCH') }}
+                                                            <button type="submit" class="btn btn-danger square-btn-adjust" style="background-color:green;border-radius: 3px">Konfirmasi
+                                                            </button>
+                                                        </form>
+                                                    @endif
                                                 </div>
                                             </td>
                                         </tr>
                                     </tbody>
                                     @endforeach
                                 </table>
-                            </div>
+                        
                             
                         </div>
-                    </div>
+
                     <!--End Advanced Tables -->
                 </div>
             </div>

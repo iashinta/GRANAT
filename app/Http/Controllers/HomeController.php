@@ -30,30 +30,37 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'riwayat' => 'required|mimes:pdf|max:10240',
+            'profil' => 'required|mimes:pdf|max:10240',
+            'lagu' => 'required|mimes:zip,rar|max:10240',
+            'logo' => 'required|image|mimes:jpeg,png|max:5120',
+        ]);
+
         if($request->hasFile('riwayat')) {
             $riwayat = $request->file('riwayat');
-            $riwayat_name = "riwayat_" . Auth::user()->name . '.' . $riwayat->extension();
+            $riwayat_name = "riwayat_" . Auth::user()->id . '.' . $riwayat->extension();
             $destinationPath = 'riwayats';
             $request->riwayat->move($destinationPath, $riwayat_name);
         }
 
         if($request->hasFile('profil')) {
             $profil = $request->file('profil');
-            $profil_name = "profil_" . Auth::user()->name . '.' . $profil->extension();
+            $profil_name = "profil_" . Auth::user()->id . '.' . $profil->extension();
             $destinationPath = 'profils';
             $request->profil->move($destinationPath, $profil_name);
         }
 
         if($request->hasFile('lagu')) {
             $lagu = $request->file('lagu');
-            $lagu_name = "lagu_" . Auth::user()->name . '.' . $lagu->extension();
+            $lagu_name = "lagu_" . Auth::user()->id . '.' . $lagu->extension();
             $destinationPath = 'lagu';
             $request->lagu->move($destinationPath, $lagu_name);
         }
 
         if($request->hasFile('logo')) {
             $logo = $request->file('logo');
-            $logo_name = "logo_" . Auth::user()->name . '.' . $logo->extension();
+            $logo_name = "logo_" . Auth::user()->id . '.' . $logo->extension();
             $destinationPath = 'logo';
             $request->logo->move($destinationPath, $logo_name);
         }

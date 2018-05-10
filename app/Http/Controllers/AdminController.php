@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -24,6 +24,16 @@ class AdminController extends Controller
     {
         return view('admindashboard');
     }
+
+    public function peserta()
+    {   
+        $users= user::join('kabupatens','users.asal','=','kabupatens.id')
+         ->select('users.*','kabupatens.name as nama_kabupaten')
+         ->get();
+
+        return view('datapeserta', compact('users'));
+    }
+
     
     /**
      * Show the form for creating a new resource.
@@ -65,7 +75,7 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -75,9 +85,21 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
-        //
+        $users = User::find($id);
+        $users->status="Sudah Lunas";
+        $users->save();
+        return redirect('/admin/peserta');
+    }
+
+    public function cancel(Request $request, $id)
+    {
+        $users = User::find($id);
+        $users->status="Belum Lunas";
+        $users->save();
+        return redirect('/admin/peserta');
     }
 
     /**

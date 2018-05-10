@@ -17,11 +17,7 @@ class UserController extends Controller
     {
         $this->middleware('auth:admin');
     }
-    public function index()
-    {   
-        $users= user::all();
-        return view('datapeserta', compact('users'));
-    }
+    
 
     /**
      * Show the form for creating a new resource.

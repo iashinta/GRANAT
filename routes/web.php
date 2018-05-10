@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/admin/peserta', 'UserController@index');
+Route::get('/admin/peserta', 'AdminController@peserta');
 
 Route::get('auth.register', 'auth.RegisterController@showKabupatens');
 
@@ -46,6 +46,8 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/upload-berkas', 'HomeController@upload')->name('upload');
 Route::post('/upload-berkas','HomeController@store');
+Route::patch('admin/edit/{id}', 'AdminController@update')->name('confirm');
+Route::post('admin/edit/{id}', 'AdminController@cancel')->name('cancel');
 Route::get('/sejarah', function(){
     return view("sejarah");
 });

@@ -21,11 +21,19 @@
                 </li>
 
                 <li> 
+                    <a href="{{url('profile')}}" aria-expanded="false">
+                        <i class="fa fa-user"></i>
+                        <span class="hide-menu">Profile</span>
+                    </a>
+                </li>
+
+                <li> 
                     <a href="{{url('upload-berkas')}}" aria-expanded="false">
                         <i class="fa fa-folder-open"></i>
                         <span class="hide-menu">Upload Berkas</span>
                     </a>
                 </li>
+
                 <li> 
                     <a href="https://granatsmft.com/#contact" aria-expanded="false">
                         <i class="fa fa-info-circle"></i>

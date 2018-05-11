@@ -46,6 +46,9 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/upload-berkas', 'HomeController@upload')->name('upload');
 Route::post('/upload-berkas','HomeController@store');
+Route::get('/profile', 'UserController@show')->name('profile');
+Route::post('/profile','UserController@show');
+Route::post('/profile/{id}','UserController@update')->name('editprofile');
 Route::patch('admin/edit/{id}', 'AdminController@update')->name('confirm');
 Route::post('admin/edit/{id}', 'AdminController@cancel')->name('cancel');
 Route::get('/sejarah', function(){

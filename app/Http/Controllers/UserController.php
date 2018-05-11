@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Kabupaten;
 
+use Illuminate\Support\Facades\Auth;
+
 class UserController extends Controller
 {
     /**
@@ -15,7 +17,7 @@ class UserController extends Controller
      */
      public function __construct()
     {
-        $this->middleware('auth:admin');
+        $this->middleware('auth');
     }
     
 
@@ -46,9 +48,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        
+        $users= Auth::user()->all();
+        $kabupatens = kabupaten::all();
+        $selectedvalue = Auth::user()->asal;
+        return view('edituser', compact('users','kabupatens','selectedvalue'));
     }
 
     /**
@@ -71,7 +76,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $users = User::find($id);
+        $users->name=$request->name;
+        $users->email=$request->email;
+        $users->leader=$request->leader;
+        $users->no_id=$request->no_id;
+        $users->genre=$request->genre;
+        $users->no_telp=$request->no_telp;
+        $users->asal=$request->asal;
+        $users->save();
+        return redirect('/profile');
     }
 
     /**

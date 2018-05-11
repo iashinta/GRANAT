@@ -23,7 +23,7 @@
                         <h3 style="padding:10px">Data Band</h3>
                         <div class="panel-body">
                                 <table class="table table-responsive table-hover" id="dataTables-example" style="width:100%" >
-                                    <thead >
+                                    <thead>
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Band</th>
@@ -52,11 +52,36 @@
                                             <td>{{$user->leader}}</td>
                                             <td>{{$user->nama_kabupaten}}</td>
                                             <td>{{$user->no_id}}</td>
-                                            <td><a href="{{asset("riwayats/$user->riwayat")}}" class="fa fa-download" aria-hidden="true"></a> {{$user->riwayat}}</td>
-                                            <td><a href="{{asset("profils/$user->profil")}}" class="fa fa-download" aria-hidden="true"></a> {{$user->profil}}</td>
-                                            <td><a href="{{asset("lagu/$user->lagu")}}" class="fa fa-download" aria-hidden="true"></a> {{$user->lagu}}</td>
-                                            <td><a href="{{ $user->link }}">{{ $user->link }}</a></td>
-                                            <td><a href="{{asset("logo/$user->logo")}}" class="fa fa-download" aria-hidden="true"></a> {{$user->logo}}</td>
+                                            <td>
+                                                @if($user->riwayat==NULL) -
+                                                @else                            
+                                                    <a href="{{asset("riwayats/$user->riwayat")}}" class="fa fa-download" aria-hidden="true"></a>
+                                                @endif
+                                            </td>
+                                            <td> 
+                                                @if($user->profil==NULL) -
+                                                @else
+                                                    <a href="{{asset("profils/$user->profil")}}" class="fa fa-download" aria-hidden="true"></a>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                @if($user->lagu==NULL) -
+                                                @else
+                                                    <a href="{{asset("lagu/$user->lagu")}}" class="fa fa-download" aria-hidden="true"></a>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                @if($user->lagu==NULL) -
+                                                @else
+                                                    <a href="{{ $user->link }}" class="fa fa-download" aria-hidden="true"></a>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                @if($user->lagu==NULL) -
+                                                @else
+                                                    <a href="{{asset("logo/$user->logo")}}" class="fa fa-download" aria-hidden="true"></a>
+                                                @endif
+                                            </td>
                                             <td>{{$user->no_telp}}</td>
                                             <td>{{$user->status}}</td>
                                             <td style="text-align: center">

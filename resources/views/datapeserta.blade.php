@@ -52,11 +52,11 @@
                                             <td>{{$user->leader}}</td>
                                             <td>{{$user->nama_kabupaten}}</td>
                                             <td>{{$user->no_id}}</td>
-                                            <td>{{$user->riwayat}}</td>
-                                            <td>{{$user->profil}}</td>
-                                            <td>{{$user->lagu}}</td>
-                                            <td>{{$user->link}}</td>
-                                            <td>{{$user->logo}}</td>
+                                            <td><a href="{{asset("riwayats/$user->riwayat")}}" class="fa fa-download" aria-hidden="true"></a> {{$user->riwayat}}</td>
+                                            <td><a href="{{asset("profils/$user->profil")}}" class="fa fa-download" aria-hidden="true"></a> {{$user->profil}}</td>
+                                            <td><a href="{{asset("lagu/$user->lagu")}}" class="fa fa-download" aria-hidden="true"></a> {{$user->lagu}}</td>
+                                            <td><a href="{{ $user->link }}">{{ $user->link }}</a></td>
+                                            <td><a href="{{asset("logo/$user->logo")}}" class="fa fa-download" aria-hidden="true"></a> {{$user->logo}}</td>
                                             <td>{{$user->no_telp}}</td>
                                             <td>{{$user->status}}</td>
                                             <td style="text-align: center">

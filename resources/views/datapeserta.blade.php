@@ -22,7 +22,7 @@
                 <div class="col-md-12">
                         <h3 style="padding:10px">Data Band</h3>
                         <div class="panel-body">
-                                <table class="table table-responsive table-hover" id="dataTables-example" style="width:100%" >
+                                <table class="table table-responsive table-hover" id="users" style="width:100%" >
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -113,5 +113,13 @@
                     <!--End Advanced Tables -->
                 </div>
             </div>
+
+    @push('js')
+        <script style="text/javascript">
+            $(document).ready( function () {
+                $('#users').DataTable();
+            } );
+        </script>
+    @endpush
 
 @endsection 

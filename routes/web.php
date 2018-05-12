@@ -55,3 +55,5 @@ Route::get('/sejarah', function(){
     return view("sejarah");
 });
 
+//Route::post('peserta', 'AdminController@anyData')->name('datatables.data');
+

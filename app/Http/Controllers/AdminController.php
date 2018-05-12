@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use Datatables;
+use DB;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -34,7 +36,11 @@ class AdminController extends Controller
         return view('datapeserta', compact('users'));
     }
 
-    
+    public function anyData()
+    {
+        return Datatables::of(User::query())->make(true);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

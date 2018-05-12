@@ -8,6 +8,7 @@
     <title>@yield ('Title')</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="{{ asset('css/admin/bootstrap.css') }}" rel="stylesheet" />
+    <link href="{{ asset('dataTables/datatables.min.css') }}" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="{{ asset('css/admin/font-awesome.css') }}" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -89,9 +90,12 @@
     <script src="{{ asset('js/admin/bootstrap.min.js') }}"></script>
     <!-- METISMENU SCRIPTS -->
     <script src="{{ asset('js/admin/jquery.metisMenu.js') }}"></script>
-      <!-- CUSTOM SCRIPTS -->
-    <script src="{{ asset('js/admin/custom.js') }}"></script>
-    
+      <!-- DATATABLE SCRIPTS -->
+    <script src="{{ asset('js/dataTables/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('js/dataTables/dataTables.bootstrap.js') }}"></script>
+    @stack('js')
+    <!-- CUSTOM SCRIPTS -->
+    <script src="{{ asset('js/admin/custom.js') }}"></script>    
    
 </body>
 </html>

@@ -11,7 +11,6 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  width: 100%;
   margin: 0;
 }
 article,
@@ -179,7 +178,6 @@ optgroup {
   font-weight: bold;
 }
 table {
-  width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -1404,13 +1402,13 @@ pre code {
   }
 }
 table {
+  width: 100%;
   background-color: transparent;
 }
 th {
   text-align: left;
 }
 .table {
-  width: 100%;
   margin-bottom: 20px;
 }
 .table > thead > tr > th,
@@ -1589,7 +1587,6 @@ table th[class*="col-"] {
 }
 @media (max-width: 767px) {
   .table-responsive {
-    width: 100%;
     margin-bottom: 15px;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -1980,8 +1977,8 @@ select[multiple].input-lg {
   min-height: 27px;
 }
 .form-horizontal .form-group {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 .form-horizontal .form-control-static {
   padding-top: 7px;
@@ -1993,7 +1990,7 @@ select[multiple].input-lg {
 }
 .form-horizontal .has-feedback .form-control-feedback {
   top: 0;
-  right: 15px;
+  right: 0px;
 }
 .btn {
   display: inline-block;

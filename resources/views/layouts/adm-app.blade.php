@@ -8,7 +8,6 @@
     <title>@yield ('Title')</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="{{ asset('css/admin/bootstrap.css') }}" rel="stylesheet" />
-    <link href="{{ asset('dataTables/datatables.min.css') }}" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="{{ asset('css/admin/font-awesome.css') }}" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -16,6 +15,7 @@
     <link href="{{ asset('css/admin/custom.css') }}" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <link href="{{ asset('dataTables/datatables.min.css') }}" rel="stylesheet" />
 </head>
 <body>
     <div id="wrapper">
@@ -63,7 +63,7 @@
                     </li>
 
                     <li  >
-                        <a  href="form.html"><i class="fa fa-edit fa-2x"></i> Forms </a>
+                        <a  href="/admin/pengumuman"><i class="fa fa-edit fa-2x"></i> Pengumuman </a>
                     </li>
                     
                     <li  >
@@ -85,17 +85,28 @@
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="{{ asset('js/admin/jquery-1.10.2.js') }}"></script>
-      <!-- BOOTSTRAP SCRIPTS -->
-    <script src="{{ asset('js/admin/bootstrap.min.js') }}"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="{{ asset('js/admin/jquery.metisMenu.js') }}"></script>
-      <!-- DATATABLE SCRIPTS -->
-    <script src="{{ asset('js/dataTables/jquery.dataTables.js') }}"></script>
-    <script src="{{ asset('js/dataTables/dataTables.bootstrap.js') }}"></script>
-    @stack('js')
-    <!-- CUSTOM SCRIPTS -->
-    <script src="{{ asset('js/admin/custom.js') }}"></script>    
-   
+    <!-- jQuery -->
+    <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+    <script type="text/javascript" charset="utf8" src="{{asset('js/dataTables/jquery.dataTables.js')}}"></script>
+    <script type="text/javascript" charset="utf8" src="{{asset('js/dataTables/dataTables.bootstrap.js')}}"></script>
+    <script>
+        $(function() {
+            $('#pengumuman').DataTable({
+                scrollX : true,
+                scrollCollapse : true
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            $('#users').DataTable({
+                scrollX : true,
+                scrollCollapse : true
+            });
+        });
+    </script>
+    
+
+
 </body>
 </html>

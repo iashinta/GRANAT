@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Pengumuman;
 use Datatables;
 use DB;
 use Illuminate\Http\Request;
@@ -24,8 +25,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admindashboard');
+        $pengumumans= pengumuman::all();
+        return view('admindashboard', compact('pengumumans'));
     }
+    
 
     public function peserta()
     {   
@@ -38,7 +41,7 @@ class AdminController extends Controller
 
     public function anyData()
     {
-        return Datatables::of(User::query())->make(true);
+        return Datatables::of(user::query())->make(true);
     }
 
     /**

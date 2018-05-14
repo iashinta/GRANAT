@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Pengumuman;
 
 class PengumumanController extends Controller
 {
@@ -13,7 +14,8 @@ class PengumumanController extends Controller
      */
     public function index()
     {
-        //
+        $pengumumans= pengumuman::all();
+        return view('index', compact('pengumumans'));
     }
 
     /**
@@ -23,7 +25,8 @@ class PengumumanController extends Controller
      */
     public function create()
     {
-        //
+        $pengumumans= pengumuman::all();
+        return view('pengumuman', compact('pengumumans'));
     }
 
     /**
@@ -34,7 +37,11 @@ class PengumumanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pengumumans = new pengumuman();
+        $pengumumans->judul = $request->judul;
+        $pengumumans->isi = $request->isi;
+        $pengumumans->save();
+        return redirect(route('admin.dashboard'));
     }
 
     /**
@@ -45,7 +52,7 @@ class PengumumanController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -56,7 +63,8 @@ class PengumumanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pengumumans= pengumuman::find($id);
+        return view('editpengumuman', compact('pengumumans'));
     }
 
     /**
@@ -68,7 +76,11 @@ class PengumumanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pengumumans = pengumuman::find($id);
+        $pengumumans->judul = $request->judul;
+        $pengumumans->isi = $request->isi;
+        $pengumumans->save();
+        return redirect(route('admin.dashboard'));
     }
 
     /**
@@ -79,6 +91,8 @@ class PengumumanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pengumumans = pengumuman::find($id);
+        $pengumumans->delete();
+        return view('admindashboard', compact('pengumumans'));
     }
 }

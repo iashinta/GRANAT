@@ -13,12 +13,10 @@
     GENERAL  STYLES    
     =============================================*/
 body {
-    width: 150%;
     font-family: 'Open Sans', sans-serif;
 }
 
  #wrapper {
-    width: 100%;
     background:#202020;
 }
 
@@ -29,7 +27,6 @@ body {
    
 }
 #page-inner {
-    width:100%;
     margin:10px 20px 10px 0px;
     background-color:#fff!important;
     padding:10px;
@@ -79,7 +76,6 @@ margin: 0 15px 10px 0;
 width: 70px;
 height: 70px;
 line-height: 75px;
-vertical-align: middle;
 text-align: center;
 font-size: 40px;
 }
@@ -121,7 +117,6 @@ margin: 0 15px 10px 0;
 width: 70px;
 height: 70px;
 line-height: 75px;
-vertical-align: middle;
 text-align: center;
 font-size: 40px;
 }

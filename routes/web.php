@@ -11,9 +11,8 @@
 |
 */
 Auth::routes();
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::get('/','PengumumanController@index');
 
 Route::get('/admin/peserta', 'AdminController@peserta');
 
@@ -39,6 +38,12 @@ Route::group(['prefix'=>'admin'], function() {
         Route::get('password/reset/{token}', ['as' => 'admin.password.reset.token', 'uses' => 'AdminAuth\ResetPasswordController@showResetForm']);
         Route::post('password/reset', ['uses' => 'AdminAuth\ResetPasswordController@reset']);
         Route::get('/dashboard','AdminController@index')->name('admin.dashboard');
+
+        Route::get('pengumuman', 'PengumumanController@create');
+        Route::post('pengumuman', 'PengumumanController@store');
+        Route::get('pengumuman/{id}/edit', 'PengumumanController@edit')->name('pengumuman.edit');
+        Route::post('pengumuman/{id}', 'PengumumanController@update')->name('pengumuman.update');
+        Route::delete('pengumuman/{id}', 'PengumumanController@destroy')->name('pengumuman.delete');
     });
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -55,5 +60,7 @@ Route::get('/sejarah', function(){
     return view("sejarah");
 });
 
-//Route::post('peserta', 'AdminController@anyData')->name('datatables.data');
+
+
+Route::post('peserta', 'AdminController@anyData')->name('datatables.data');
 

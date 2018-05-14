@@ -87,39 +87,34 @@
         <!-- isi timeline begin -->
         <div >
         <ul class="timeline">
-          <li class="wow fadeInLeft">
-            <div class="timeline-badge"><i class="far fa-edit"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">Pendaftaran Band</h4>
-              </div>
-              <div class="timeline-body">
-                <p>Pendaftaran band audition dibuka dari tanggal 6 Mei 2018 sampai 16 Juni 2018.</p>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-right wow fadeInRight">
-            <div class="timeline-badge"><i class="fab fa-bitcoin"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">Pembayaran Registrasi Band Audition</h4>
-              </div>
-              <div class="timeline-body">
-                <p>Pembayaran di transfer melalui Bank BRI sejumlah Rp.50.000,-<br>No. Rek 0248-01-024417-50-2 a.n. I Dewa Gede Wedrayana Kembar Suputra. Konfirmasi dan sertakan bukti pembayaran ke CP 082247819997.</p>
-              </div>
-            </div>
-          </li>
-          <li class="wow fadeInLeft">
-            <div class="timeline-badge"><i class="far fa-calendar-alt"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">Audisi CD</h4>
-              </div>
-              <div class="timeline-body">
-                <p>Audisi CD akan dilaksanakan pada tanggal 17 Juni 2018 di Sekber FT UNUD, Kampus Sudirman, pengumuman lebih lanjut akan dipost segera. </p>
-              </div>
-            </div>
-          </li>
+          
+          @foreach($pengumumans as $pengumuman)
+          @if($pengumuman->id %2 == 0)
+            <li class="timeline-right wow fadeInRight">
+                <div class="timeline-badge"><i class="fas fa-bell"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">{{$pengumuman->judul}}</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>{{$pengumuman->isi}}</p>
+                  </div>
+                </div>
+            </li>
+          @else
+            <li class="wow fadeInLeft">
+                <div class="timeline-badge"><i class="fas fa-bell"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">{{$pengumuman->judul}}</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>{{$pengumuman->isi}}</p>
+                  </div>
+                </div>
+            </li>
+          @endif
+          @endforeach
         </ul>
       </div>
     </section>

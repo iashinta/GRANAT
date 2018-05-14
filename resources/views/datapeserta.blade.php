@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-<!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
@@ -16,13 +15,12 @@
                     </div>
                 </div>
                  <!-- /. ROW  -->
-                 <hr />
                
             <div class="row">
                 <div class="col-md-12">
                         <h3 style="padding:10px">Data Band</h3>
                         <div class="panel-body">
-                                <table class="table table-responsive table-hover" id="users" style="width:100%" >
+                                <table class="table table-responsive table-hover" id="users" >
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -42,8 +40,9 @@
                                             <th> </th>
                                         </tr>
                                     </thead>
-                                    @foreach ($users as $user)
                                     <tbody>
+                                    
+                                    @foreach ($users as $user)
                                         <tr>
                                             <td>{{$user->id}}</td>
                                             <td>{{$user->name}}</td>
@@ -103,8 +102,9 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                    </tbody>
                                     @endforeach
+                                    </tbody>
+                                    
                                 </table>
                         
                             
@@ -114,12 +114,5 @@
                 </div>
             </div>
 
-    @push('js')
-        <script style="text/javascript">
-            $(document).ready( function () {
-                $('#users').DataTable();
-            } );
-        </script>
-    @endpush
 
 @endsection 

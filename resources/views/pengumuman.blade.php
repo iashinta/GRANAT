@@ -25,6 +25,10 @@
                                     <input class="form-control" name="judul" placeholder="Judul Pengumuman" style="width:500px"/>
                             </div>
                             <div class="form-group">
+                                <label>Input Gambar</label>
+                                <input type="file" class="form-control" name="gambar" style="width:500px"/>
+                            </div>
+                            <div class="form-group">
                                     <label>Input Isi</label>
                                     <textarea class="form-control" name="isi" rows="5" placeholder="Masukkan Isi Pengumuman" style="width:500px"></textarea>
                             </div>

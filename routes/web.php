@@ -11,8 +11,11 @@
 |
 */
 Auth::routes();
-
-Route::get('/','PengumumanController@index');
+Route::get('/', function(){
+    return view("index");
+});
+Route::get('/news','PengumumanController@index');
+Route::get('/news/{id}','PengumumanController@show')->name('detail.news');
 
 Route::get('/admin/peserta', 'AdminController@peserta');
 

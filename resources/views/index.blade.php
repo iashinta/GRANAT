@@ -76,48 +76,7 @@
 
       </div>
     </section><!-- #about -->
-    <!--==========================
-      Timeline Section
-    ============================-->
-    <section id="news">
-      <div class="container">
-        <div class="page-header">
-          <h1 id="timeline">Pengumuman</h1>
-        </div>
-        <!-- isi timeline begin -->
-        <div >
-        <ul class="timeline">
-          
-          @foreach($pengumumans as $pengumuman)
-          @if($pengumuman->id %2 == 0)
-            <li class="timeline-right wow fadeInRight">
-                <div class="timeline-badge"><i class="fas fa-bell"></i></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4 class="timeline-title">{{$pengumuman->judul}}</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p>{{$pengumuman->isi}}</p>
-                  </div>
-                </div>
-            </li>
-          @else
-            <li class="wow fadeInLeft">
-                <div class="timeline-badge"><i class="fas fa-bell"></i></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4 class="timeline-title">{{$pengumuman->judul}}</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p>{{$pengumuman->isi}}</p>
-                  </div>
-                </div>
-            </li>
-          @endif
-          @endforeach
-        </ul>
-      </div>
-    </section>
+    
     <!--==========================
       Tour Section
     ============================-->

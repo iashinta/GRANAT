@@ -15,7 +15,7 @@ class PengumumanController extends Controller
     public function index()
     {
         $pengumumans= pengumuman::all();
-        return view('index', compact('pengumumans'));
+        return view('news', compact('pengumumans'));
     }
 
     /**
@@ -37,8 +37,20 @@ class PengumumanController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'gambar' => 'required|image|mimes:jpeg,png|max:5120',
+        ]);
+
+        if($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $gambar_name = "g" . date('dm') . '_' . date('His') . '.' . $gambar->extension();
+            $destinationPath = 'images';
+            $request->gambar->move($destinationPath, $gambar_name);
+        }
+
         $pengumumans = new pengumuman();
         $pengumumans->judul = $request->judul;
+        $pengumumans->gambar = $gambar_name;
         $pengumumans->isi = $request->isi;
         $pengumumans->save();
         return redirect(route('admin.dashboard'));
@@ -52,7 +64,8 @@ class PengumumanController extends Controller
      */
     public function show($id)
     {
-
+        $pengumumans= pengumuman::find($id);
+        return view('detailnews', compact('pengumumans'));
     }
 
     /**
@@ -76,8 +89,19 @@ class PengumumanController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'gambar' => 'required|image|mimes:jpeg,png|max:5120',
+        ]);
+
+        if($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $gambar_name ="g" . date('dm') . '_' . date('His') . '.' . $gambar->extension();
+            $destinationPath = 'images';
+            $request->gambar->move($destinationPath, $gambar_name);
+        }
         $pengumumans = pengumuman::find($id);
         $pengumumans->judul = $request->judul;
+        $pengumumans->gambar = $gambar_name;
         $pengumumans->isi = $request->isi;
         $pengumumans->save();
         return redirect(route('admin.dashboard'));

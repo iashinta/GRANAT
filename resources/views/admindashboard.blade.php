@@ -26,6 +26,7 @@
                                                 <th >No</th>
                                                 <th>Judul</th>
                                                 <th>Isi</th>
+                                                <th>Gambar</th>
                                                 <th style="text-align: center">Opsi</th>
                                             </tr>
                                         </thead>
@@ -35,15 +36,21 @@
                                                     <td>{{$pengumuman->id}}</td>
                                                     <td>{{$pengumuman->judul}}</td>
                                                     <td>{{$pengumuman->isi}}</td>
+                                                    <td><center>
+                                                        @if($pengumuman->gambar==NULL) -
+                                                        @else
+                                                            <a href="{{asset("images/$pengumuman->gambar")}}" class="fa fa-eye" aria-hidden="true"></a>
+                                                        @endif
+                                                    </center></td>
                                                     <td><div style="text-align: center">
                                                         <form method="GET" action="{{route('pengumuman.edit', $pengumuman->id)}}" style="display: inline-block">
                                                             {{csrf_field()}}
-                                                            <button type="submit" href="{{route('pengumuman.edit', $pengumuman->id)}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                            </button></form>
+                                                            <a href="{{route('pengumuman.edit', $pengumuman->id)}}" class="fa fa-pencil-square-o" aria-hidden="true">
+                                                            </a></form>
                                                         <form class='delete' method="POST" action="{{route('pengumuman.delete', $pengumuman->id)}}" style="display: inline-block">
                                                             {{csrf_field()}}
                                                             <input type="hidden" name="_method" value="DELETE">
-                                                            <button type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button></form>
+                                                            <a type="submit" class="fa fa-trash-o" aria-hidden="true"></a></form>
                                                         </div>
                                                     </td>
                                                 </tr>

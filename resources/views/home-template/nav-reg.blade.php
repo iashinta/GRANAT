@@ -42,7 +42,7 @@
         <ul class="nav-menu">
           <li><a href="/#hero">Home</a></li>
           <li><a href="/#about">About Us</a></li>
-          <li><a href="/#news">News</a></li>
+          <li><a href="https://google.com">News</a></li>
           <li><a href="/#facts">Important Date</a></li>
           <li><a href="/#contact">Contact</a></li>
           <li><a href="{{url('sejarah')}}"   >History</a></li>
@@ -69,7 +69,7 @@
             <li class="menu"><a href="{{url('home')}}">DashBoard</a></li>
           <li class="menu-active"><a href="/#hero">Home</a></li>
           <li><a href="/#about">About Us</a></li>
-          <li><a href="/#news">News</a></li>
+          <li><a href="https://google.com">News</a></li>
           <li><a href="/#facts">Important Date</a></li>
           <li><a href="/#contact">Contact</a></li>
           <li><a href="{{url('sejarah')}}"   >Sejarah</a></li>

@@ -25,6 +25,10 @@
                                     <input class="form-control" name="judul" value="{{$pengumumans->judul}}" style="width:500px"/>
                             </div>
                             <div class="form-group">
+                                <label>Edit Gambar</label>
+                                <input type="file" class="form-control" name="gambar" value="{{$pengumumans->gambar}}" style="width:500px"/>
+                            </div>
+                            <div class="form-group">
                                     <label>Edit Isi</label>
                                     <textarea class="form-control" name="isi" rows="5" id="isi" style="width:500px"></textarea>
                             </div>

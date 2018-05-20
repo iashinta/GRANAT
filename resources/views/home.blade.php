@@ -29,7 +29,7 @@
                             Siapkan berkas-berkas persyaratan pendaftaran setelah melakukan pembayaran. Berkas yang diperlukan:
                             <br>1. Riwayat manggung dalam bentuk .pdf (max. 10mb)
                             <br>2. Profile band dalam bentuk .pdf (max. 10mb)
-                            <br>3. Minimal 2 lagu dalam bentuk .mp3 (max. 10mb)
+                            <br>3. Minimal 2 lagu di dalam file .zip (max. 10mb)
                             <br>4. Link video band di upload via youtube (Jika Ada)
                             <br>5. Logo Band dalam bentuk .png/.jpg (max. 5mb)
                             

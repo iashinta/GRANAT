@@ -7,7 +7,9 @@
  
                  <li> 
                     <a aria-expanded="false">
-                    <span class="hide-menu"><b>Welcome, {{ Auth::user()->name }}!</b></span></a>
+                    <span class="hide-menu sdbr-prfl-title">
+                        <b>Welcome, {{ Auth::user()->name }}!</b></span>
+                    </a>
                 </li>               
                 <li> 
                     <a href="https://granatsmft.com" aria-expanded="false">

@@ -117,6 +117,6 @@ class PengumumanController extends Controller
     {
         $pengumumans = pengumuman::find($id);
         $pengumumans->delete();
-        return view('admindashboard', compact('pengumumans'));
+        return redirect(route('admin.dashboard'));
     }
 }

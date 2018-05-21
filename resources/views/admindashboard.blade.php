@@ -43,14 +43,15 @@
                                                         @endif
                                                     </center></td>
                                                     <td><div style="text-align: center">
-                                                        <form method="GET" action="{{route('pengumuman.edit', $pengumuman->id)}}" style="display: inline-block">
-                                                            {{csrf_field()}}
-                                                            <a href="{{route('pengumuman.edit', $pengumuman->id)}}" class="fa fa-pencil-square-o" aria-hidden="true">
-                                                            </a></form>
-                                                        <form class='delete' method="POST" action="{{route('pengumuman.delete', $pengumuman->id)}}" style="display: inline-block">
-                                                            {{csrf_field()}}
-                                                            <input type="hidden" name="_method" value="DELETE">
-                                                            <a type="submit" class="fa fa-trash-o" aria-hidden="true"></a></form>
+                                                            <form method="GET" action="{{route('pengumuman.edit', $pengumuman->id)}}" style="display: inline-block">
+                                                                {{csrf_field()}}
+                                                                <button type="submit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                </button></form>
+                                                            <form class='delete' method="POST" action="{{route('pengumuman.delete', $pengumuman->id)}}" style="display: inline-block">
+                                                                {{csrf_field()}}
+                                                                <input type="hidden" name="_method" value="DELETE">
+                                                                <button type="submit" onclick="return confirm('Are you sure?')"><i class="fa fa-trash-o" aria-hidden="true"></i></button></form>
+                                                        
                                                         </div>
                                                     </td>
                                                 </tr>

@@ -44,7 +44,7 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-                    <img src="{{ asset('images/pig.png') }}" class="user-image img-responsive"/>
+                    <img src="{{ asset('images/find_user.png') }}" class="user-image img-responsive"/>
 				    <a>
 				         Welcome, {{Auth::guard('admin')->user()->username}}!
 				    </a>

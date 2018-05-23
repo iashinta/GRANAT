@@ -15,6 +15,9 @@ class CreatePengumumanTable extends Migration
     {
         Schema::create('pengumuman', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('judul');
+            $table->string('gambar');
+            $table->longtext('isi');
             $table->timestamps();
         });
     }

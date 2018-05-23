@@ -22,7 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('leader');
             $table->string('asal');
             $table->string('no_id');
+            $table->string('riwayat');
+            $table->string('profil');
+            $table->string('lagu');
             $table->string('link');
+            $table->string('logo');
             $table->string('no_telp');
             $table->enum('status', ['Belum Lunas','Sudah Lunas']);
             $table->rememberToken();
